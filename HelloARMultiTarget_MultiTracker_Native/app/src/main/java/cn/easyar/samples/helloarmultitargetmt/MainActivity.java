@@ -30,7 +30,7 @@ public class MainActivity extends ActionBarActivity{
     *  3. find the created item in the list and show key
     *  4. set key string bellow
     */
-    static String key = "===PLEASE ENTER YOUR KEY HERE===";
+    static String key = "AoNj8Mlzo2I4eBqFr7XaQr5xrmAcolZkhyKgQ5ZsMbjcdEAWRjJOd8u93Eeb8BnK2mEC7xjeXDYknwWcqkBU4B577V8ZS7iTwqVa1cdda2841caba6e684a8a18d256d8c0fvdlrn26A6OTE18ljG4Oxl3t40u7zQvSEYTNBme3tP0ycbnl42QiQTEybUTQyjgrUjEpe";
 
     static {
         System.loadLibrary("EasyAR");
