@@ -67,12 +67,12 @@ public class Renderer implements GLSurfaceView.Renderer {
 
 
         //Load textures for the panel
-        loadTorreonTextures();
+//        loadTorreonTextures();
 
         try {
 
-            torreon = loadModelOBJ(mActivity.getResources().openRawResource(R.raw.table),
-                    mActivity.getResources().openRawResource(R.raw.beside_table), 0.04f);
+            torreon = loadModelMd2(mActivity.getResources().openRawResource(R.raw.marvin),
+                    mActivity.getResources().openRawResource(R.raw.marvin_p), 0.2f);
 
             torreon.setCollisionMode(Object3D.COLLISION_CHECK_OTHERS|Object3D.COLLISION_CHECK_SELF);
 
@@ -183,6 +183,20 @@ public class Renderer implements GLSurfaceView.Renderer {
             o3d.build();
         }
         return o3d;
+    }
+
+    private Object3D loadModelMd2(InputStream inputStream, InputStream inputStream2, float scale) throws UnsupportedEncodingException {
+
+        Object3D model = Loader.loadMD2(inputStream, scale);
+
+        TextureManager.getInstance().addTexture("marvin_p.jpg",
+                new Texture(inputStream2));
+        // 設定使用名為 Blade.jpg 的材質 (就是上面設定的名字)
+        model.setTexture("marvin_p.jpg");
+        model.strip();
+        model.build();
+
+        return model;
     }
 
     private void loadTorreonTextures()
