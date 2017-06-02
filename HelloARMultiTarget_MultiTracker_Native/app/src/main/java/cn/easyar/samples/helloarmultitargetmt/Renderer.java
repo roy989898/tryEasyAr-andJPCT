@@ -193,6 +193,7 @@ public class Renderer implements GLSurfaceView.Renderer {
                 new Texture(inputStream2));
         // 設定使用名為 Blade.jpg 的材質 (就是上面設定的名字)
         model.setTexture("marvin_p.jpg");
+        model.rotateX((float)(0.5*Math.PI));
         model.strip();
         model.build();
 
