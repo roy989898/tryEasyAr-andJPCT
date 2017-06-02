@@ -193,7 +193,7 @@ public class Renderer implements GLSurfaceView.Renderer {
 
         if (!txtMgr.containsTexture("table_default.jpg")) {
             Texture torre_diffuse6 = new Texture(mActivity.getResources().openRawResource(R.raw.table_default));
-            txtMgr.addTexture("table_default.jpg", torre_diffuse6);
+            txtMgr.addTexture("table_default.png", torre_diffuse6);
         }
 
        /* if (!txtMgr.containsTexture("torre_normals.jpg")) {
