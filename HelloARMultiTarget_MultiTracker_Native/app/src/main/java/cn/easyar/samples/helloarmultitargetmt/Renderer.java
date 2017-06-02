@@ -71,8 +71,8 @@ public class Renderer implements GLSurfaceView.Renderer {
 
         try {
 
-            torreon = loadModelOBJ(mActivity.getResources().openRawResource(R.raw.torreon_obj),
-                    mActivity.getResources().openRawResource(R.raw.torreon_mat), 0.5f);
+            torreon = loadModelOBJ(mActivity.getResources().openRawResource(R.raw.table),
+                    mActivity.getResources().openRawResource(R.raw.beside_table), 0.04f);
 
             torreon.setCollisionMode(Object3D.COLLISION_CHECK_OTHERS|Object3D.COLLISION_CHECK_SELF);
 
@@ -191,15 +191,15 @@ public class Renderer implements GLSurfaceView.Renderer {
         TextureManager txtMgr = TextureManager.getInstance();
         //TEXTURAS TORREON
 
-        if (!txtMgr.containsTexture("torre_diffuse6.jpg")) {
-            Texture torre_diffuse6 = new Texture(mActivity.getResources().openRawResource(R.raw.torre_diffuse6));
-            txtMgr.addTexture("torre_diffuse6.jpg", torre_diffuse6);
+        if (!txtMgr.containsTexture("table_default.jpg")) {
+            Texture torre_diffuse6 = new Texture(mActivity.getResources().openRawResource(R.raw.table_default));
+            txtMgr.addTexture("table_default.jpg", torre_diffuse6);
         }
 
-        if (!txtMgr.containsTexture("torre_normals.jpg")) {
+       /* if (!txtMgr.containsTexture("torre_normals.jpg")) {
             Texture torre_normals = new Texture(mActivity.getResources().openRawResource(R.raw.torre_normals));
             txtMgr.addTexture("torre_normals.jpg", torre_normals);
-        }
+        }*/
 
     }
 
